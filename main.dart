@@ -10,9 +10,9 @@ import 'package:weather/weather.dart';
 
 
  /**i wanted to improve functionality abit so instead of hardcoding the device location i used the flutter
-            geolocator to get device longitude and latitude then used another api to convert the info into a string that could be taken
-            with the openweather api data so that your weather app would give your the location of your device.
-            **/ 
+     geolocator to get device longitude and latitude then used another api to convert the info into a string that could be taken
+     with the openweather api data so that your weather app would give your the location of your device.
+ **/ 
 
 void main() => runApp(MaterialApp(
       title: 'Gabriel\'s Simple weather App',
