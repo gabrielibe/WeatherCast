@@ -9,6 +9,10 @@ import 'package:geocoder/geocoder.dart';
 import 'package:weather/weather.dart';
 
 
+ /**i wanted to improve functionality abit so instead of hardcoding the device location i used the flutter
+            geolocator to get device longitude and latitude then used another api to convert the info into a string that could be taken
+            with the openweather api data so that your weather app would give your the location of your device.
+            **/ 
 
 void main() => runApp(MaterialApp(
       title: 'Gabriel\'s Simple weather App',
@@ -32,7 +36,7 @@ class _HomeState extends State<Home> {
   var humidity;
   var windSpeed;
   var description;
-  String temperature;
+  String Location;
   String country ;
 
   WeatherFactory wf = new WeatherFactory("5ac1833d0b7f70b735b017f6804d99be");
@@ -43,11 +47,10 @@ class _HomeState extends State<Home> {
     Weather w = await wf.currentWeatherByLocation(position.latitude,  position.longitude);
 
 setState(() {
-  this.temperature =w.areaName;
+  this.Location =w.areaName;
   this.country =' '+ w.country;
 });
-
-
+//get user location first and then get weather 
     getWeather();
 
 
@@ -59,7 +62,11 @@ setState(() {
     Future getWeather() async {
     getUserLocation();
       http.Response response = await http.get(
-          'http://api.openweathermap.org/data/2.5/weather?q=$temperature&units=imperial&appid=5ac1833d0b7f70b735b017f6804d99be');
+            /**i wanted to improve functionality abit so instead of hardcoding the device location i used the flutter
+            geolocator to get device longitude and latitude then used another api to convert the info into a string that could be taken
+            with the openweather api data so that your weather app would give your the location of your device.
+            **/ 
+          'http://api.openweathermap.org/data/2.5/weather?q=$Location&units=imperial&appid=5ac1833d0b7f70b735b017f6804d99be');
       var result = jsonDecode(response.body);
       setState(() {
         this.temp = result['main']['temp'];
@@ -103,7 +110,7 @@ setState(() {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
-                    child: Text('Currently in $temperature$country',
+                    child: Text('Currently in $Location$country',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 14,
