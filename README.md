@@ -1,16 +1,3 @@
-# my_weather_app
+# WeatherCast
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+"WeatherCast is your trusted companion for up-to-the-minute weather information. Stay informed with real-time weather updates, accurate forecasts, and detailed weather reports. With an intuitive interface and user-friendly design, WeatherCast ensures you're always prepared for whatever Mother Nature has in store. Whether you're planning your day, a weekend getaway, or a long-term trip, trust WeatherCast to keep you ahead of the weather, no matter where you are."
